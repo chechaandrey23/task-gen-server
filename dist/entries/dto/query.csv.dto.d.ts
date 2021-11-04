@@ -1,7 +1,5 @@
-export declare class QueryCSVDTO {
-    readonly locale: "us" | "ru" | "uk";
-    readonly errors: number;
+import { QueryDTO } from './query.dto';
+export declare class QueryCSVDTO extends QueryDTO {
     readonly pageStart: number;
     readonly pageEnd: number;
-    readonly seed: string;
 }

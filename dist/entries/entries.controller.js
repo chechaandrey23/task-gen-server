@@ -14,7 +14,6 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.EntriesController = void 0;
 const common_1 = require("@nestjs/common");
-const delay = require("delay");
 const stringify = require("csv-stringify");
 const aStringify = (arg, opts) => {
     return new Promise((res, rej) => {
@@ -37,7 +36,6 @@ let EntriesController = class EntriesController {
         this.itemPerPage = 20;
     }
     async get(queryDTO) {
-        await delay(1000);
         return await this.entriesService.getPage(queryDTO.locale, queryDTO.seed, this.itemPerPage, queryDTO.page, queryDTO.errors);
     }
     async getCSV(queryCSVDTO, res) {
