@@ -30,7 +30,7 @@ export class EntriesController {
 	
 	@Get()
 	public async get(@Query() queryDTO: QueryDTO) {
-		await delay(1000);
+		//await delay(1000);
 		return await this.entriesService.getPage(queryDTO.locale, queryDTO.seed, this.itemPerPage, queryDTO.page, queryDTO.errors);
 	}
 	
